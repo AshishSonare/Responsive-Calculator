@@ -1,0 +1,140 @@
+:root {
+  --operator-bg: #ff8975;
+  --action-bg: #ff5436;
+  --numkeys-bg: #34495e;
+  --background: whitesmoke;
+  --border: rgb(201, 201, 201);
+  --bodybg: lightgrey;
+  --text-history: grey;
+  --text-input: black;
+}
+
+.darkmode {
+  --operator-bg: #ff5436;
+  --action-bg: #ff8975;
+  --numkeys-bg: #2c3f50;
+  --background: #242525;
+  --border: rgb(37, 37, 37);
+  --bodybg: rgb(54, 53, 53);
+  --text-history: grey;
+  --text-input: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.5s ease, color 0.3s ease;
+}
+
+body {
+  background-color: var(--bodybg);
+}
+
+/* Mode div Styling */
+#mode {
+  height: 01.5rem;
+  width: 01.5rem;
+  /* border: 1px solid black; */
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Container Styling */
+.container {
+  background-color: var(--background);
+  width: 50vw;
+  height: 97vh;
+  margin: 10px auto;
+  padding: 1rem;
+  border: 2px solid var(--border);
+  border-radius: 1rem;
+}
+@media (max-width: 768px) {
+  .container {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+  }
+}
+
+/* Display Styling */
+.display {
+  height: 40vmin;
+  width: 100%;
+  padding: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+#inputs {
+  min-width: 100%;
+  box-sizing: border-box;
+  height: 3rem;
+  padding: 1rem;
+  border: none;
+  color: var(--text-input);
+  font-size: 2rem;
+  text-align: right;
+  border-radius: 0.75rem;
+  background-color: var(--background);
+}
+
+p {
+  color: var(--text-history);
+  font-size: 1.5rem;
+  text-align: right;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .display {
+    height: 48%;
+  }
+}
+
+/* Keys Styling */
+.keys {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  height: 50vh;
+}
+
+@media (max-width: 768px) {
+  .keys {
+    height: 45vh;
+  }
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  font-size: larger;
+  font-weight: bold;
+  color: white;
+  min-width: 2.5rem;
+  min-height: 2.5rem;
+}
+
+.number {
+  background-color: var(--numkeys-bg);
+}
+
+.action {
+  background-color: var(--action-bg);
+}
+
+.operator {
+  background-color: var(--operator-bg);
+}
+
+.long {
+  grid-row: span 2;
+}
+
+.para {
+  grid-column: span 0.5;
+}

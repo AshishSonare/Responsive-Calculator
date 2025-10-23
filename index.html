@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body id="body">
+    <!-- Container for the calculator -->
+    <div class="container">
+      <div id="mode"></div>
+      <!-- Display of history and current input -->
+      <div class="display">
+        <!-- Displaying history -->
+        <p id="fourth-last"></p>
+        <p id="third-last"></p>
+        <p id="second-last"></p>
+        <p id="last"></p>
+
+        <!-- input for new calculation -->
+        <input type="text" name="inputs" id="inputs" disabled />
+      </div>
+
+      <!-- Keys of calculator -->
+      <div class="keys-container" id="keys-container">
+        <div id="keys" class="keys">
+          <button class="action" id="actionKey">AC</button>
+          <button class="operator" id="operatorKey">(</button>
+          <button class="operator" id="operatorKey">)</button>
+          <button class="operator" id="operatorKey">/</button>
+          <button class="number" id="numberKey">7</button>
+          <button class="number" id="numberKey">8</button>
+          <button class="number" id="numberKey">9</button>
+          <button class="operator" id="operatorKey">*</button>
+          <button class="number" id="numberKey">4</button>
+          <button class="number" id="numberKey">5</button>
+          <button class="number" id="numberKey">6</button>
+          <button class="operator" id="operatorKey">-</button>
+          <button class="number" id="numberKey">1</button>
+          <button class="number" id="numberKey">2</button>
+          <button class="number" id="numberKey">3</button>
+          <button class="operator" id="operatorKey">+</button>
+          <button class="number" id="operatorKey">.</button>
+          <button class="number" id="numberKey">0</button>
+          <button class="number" id="numberKey">00</button>
+          <button class="action" id="actionKey">=</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
